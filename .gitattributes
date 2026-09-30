@@ -1,0 +1,24 @@
+# 换行与文本属性统一
+# 目的：多人/多平台协作时，脚本换行不被自动转换破坏。
+# 仓库内一律按 LF 存储；检出时按下面规则还原。
+
+* text=auto
+
+# Windows 脚本保持 CRLF —— PowerShell 5.1 与 cmd.exe 的本地约定
+*.ps1  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# 二进制不做任何转换
+*.exe  binary
+*.dll  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.zip  binary
+
+# 便于 GitHub 语言识别与 diff
+*.go   text
+*.md   text
+*.json text

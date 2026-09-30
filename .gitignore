@@ -1,0 +1,27 @@
+# ---- 编译产物 ----
+output/
+dist/
+*.exe
+*.test
+
+# ---- 运行期数据（每台终端各自生成，不入库）----
+/tasks.json
+/tasks_log.jsonl
+*.log
+
+# ---- 本地真实配置（含实际网络地址与会议号，绝不入库）----
+# 注意：exe 同级的运行期配置由部署方自己维护；
+# 模板见仓库根的 config.example.json
+/config.json
+/终端*/config.json
+
+# ---- 编辑器 / IDE ----
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ---- 系统 ----
+Thumbs.db
+Desktop.ini
+.DS_Store
